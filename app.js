@@ -17,13 +17,13 @@ function jsonToPojo(){
 		 stringInit =stringInit + ")\n{";
 		 
 		for (var key in jsonData) {
-			 stringInit = stringInit + "\n" + "self."+key + "="+key;
+			 stringInit = stringInit + "\n" + "self."+key + " = "+key;
 		 }
 		 stringInit =stringInit + "\n}";
 		 
 		 var stringDecoder = 'required init(coder decoder: NSCoder) {';
 		 for (var key in jsonData) {
-			 stringDecoder = stringDecoder + '\n' + 'self.'+key + '= decoder.decodeObject(forKey:"'+key +'") as! String';
+			 stringDecoder = stringDecoder + '\n' + 'self.'+key + ' = decoder.decodeObject(forKey:"'+key +'") as! String';
 		 }
 		 stringDecoder  = stringDecoder + 'super.init()}' ;
 		 
