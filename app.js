@@ -12,7 +12,7 @@ function jsonToPojo(){
 		 
 		 var stringInit ="init("
 		 for (var key in jsonData) {
-			 stringInit = stringInit + "\n" + key + ":String";
+			 stringInit = stringInit + "\n" + key + ":String,";
 		 }
 		 stringInit =stringInit + ")\n{";
 		 
